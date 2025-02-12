@@ -1,0 +1,13 @@
+pipeline:
+  name: "MyApp Build"
+  stages:
+    - name: "Checkout"
+      steps:
+        - name: "Clone Repository"
+          action: "git clone https://github.com/myorg/myapp.git"
+    - name: "Build"
+      steps:
+        - name: "Install Dependencies"
+          action: "npm install"
+        - name: "Compile Code"
+          action: "npm run build"
